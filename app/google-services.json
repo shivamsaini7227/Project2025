@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "552693473982",
+    "project_id": "abhiudaydata",
+    "storage_bucket": "abhiudaydata.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:552693473982:android:85b723acf02a0cad3bf4ef",
+        "android_client_info": {
+          "package_name": "com.example.myapplication2"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwVnsWa4zr0-ZnxD14Pgui_DY22tMOW9o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
