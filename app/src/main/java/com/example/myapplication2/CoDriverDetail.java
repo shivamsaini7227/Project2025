@@ -48,7 +48,7 @@ public class CoDriverDetail extends AppCompatActivity {
 
                 userData user = new userData(coDriverName, coDriverphoneNumber, codriverAddress , codriverAdhaar , codriverLicense);
                 db = FirebaseDatabase.getInstance();
-                reference = db.getReference("coDriverDetails");
+                reference = db.getReference("userData");
                 reference.child(codriverAdhaar).setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {

@@ -3,6 +3,7 @@ package com.example.myapplication2;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
@@ -40,6 +41,15 @@ public class TruckDetail extends AppCompatActivity {
         truckTypeSpinner = findViewById(R.id.truckSpinner);
         finishButton = findViewById(R.id.LBttn);
 
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
+                this,
+                R.array.truck_types,
+                android.R.layout.simple_spinner_item
+        );
+
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        truckTypeSpinner.setAdapter(adapter);
+
         finishButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -50,13 +60,12 @@ public class TruckDetail extends AppCompatActivity {
                 savingDataToDatabase(companyName,licensePlate,truckType);
                 Intent goToHome = new Intent(TruckDetail.this, Home.class);
                 startActivity(goToHome);
-                finish();
             }
 
             private void savingDataToDatabase(String companyName, String licensePlate , String truckType) {
                 userData user = new truckUserData(companyName, licensePlate, truckType);
                 db = FirebaseDatabase.getInstance();
-                reference = db.getReference("TruckDetails");
+                reference = db.getReference("truckUserData");
                 reference.child(licensePlate).setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {

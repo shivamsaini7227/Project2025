@@ -54,7 +54,7 @@ public class DriverDetail extends AppCompatActivity {
                                               String driverAdhaar , String driverLicense) {
                 userData user = new userData(driverName, phoneNumber, driverAddress , driverAdhaar ,driverLicense);
                 db = FirebaseDatabase.getInstance();
-                reference = db.getReference("DriverDetails");
+                reference = db.getReference("userData");
                 reference.child(driverAdhaar).setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {

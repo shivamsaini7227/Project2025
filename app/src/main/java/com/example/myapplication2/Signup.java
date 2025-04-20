@@ -35,13 +35,16 @@ public class Signup extends AppCompatActivity {
                 SignupPsswd = binding.SPasswd.getText().toString();
                 ConfirmPsswd = binding.SconfirmPsswd.getText().toString();
 
-                if (!SignupUserName.isEmpty() || !SignupNumber.isEmpty() || !SignupPsswd.isEmpty() || !ConfirmPsswd.isEmpty()) {
-                    if (!SignupPsswd.equals(ConfirmPsswd)) {
+                if (SignupUserName.isBlank() || SignupNumber.isBlank() || SignupPsswd.isBlank() || ConfirmPsswd.isBlank()) {
+                    Toast.makeText(Signup.this, "Fill all the fields", Toast.LENGTH_SHORT).show();
+                }
+
+                if (!SignupPsswd.equals(ConfirmPsswd)) {
                         Toast.makeText(Signup.this, "Password Doesn't Match", Toast.LENGTH_SHORT).show();
-                    }
+                }
                     userData user = new userSignupData(SignupUserName, SignupNumber, SignupPsswd);
                     db = FirebaseDatabase.getInstance();
-                    reference = db.getReference("UserData");
+                    reference = db.getReference("userSignupData");
                     reference.child(SignupUserName).setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
@@ -53,7 +56,6 @@ public class Signup extends AppCompatActivity {
                             startActivity(SignupIntent);
                         }
                     });
-                }
 
             }
 
