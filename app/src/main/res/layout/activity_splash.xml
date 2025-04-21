@@ -6,4 +6,4 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/splashscreen"
-    tools:context=".splash"></RelativeLayout>
+    tools:context=".Splash"></RelativeLayout>

@@ -1,63 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".driver_detail">
+    tools:context=".CoDriverDetail"
+    android:background="@drawable/background">
 
-<!--    <LinearLayout-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="match_parent"-->
-<!--        android:layout_alignParentStart="true"-->
-<!--        android:layout_alignParentEnd="true"-->
-<!--        android:layout_marginStart="47dp"-->
-<!--        android:layout_marginEnd="64dp"-->
-<!--        android:gravity="center"-->
-<!--        android:orientation="vertical">-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="47dp"
+        android:layout_marginEnd="64dp"
+        android:gravity="center"
+        android:orientation="vertical">
 
-<!--        <TextView-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_gravity="center"-->
-<!--            android:layout_marginBottom="20dp"-->
-<!--            android:fontFamily="@font/armata"-->
-<!--            android:text="Abhiuday Login"-->
-<!--            android:textColor="@color/orange"-->
-<!--            android:textSize="30sp"-->
-<!--            android:textStyle="bold" />-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="60dp"
+            android:fontFamily="@font/armata"
+            android:text="Driver Details"
+            android:textColor="@color/orange"
+            android:textSize="40sp"
+            android:textStyle="bold" />
 
-<!--        <EditText-->
-<!--            android:id="@+id/confirmPass"-->
+        <EditText
+            android:id="@+id/driverName"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/armata"
+            android:hint="Driver Name"
+            android:layout_marginBottom="30dp"
+            android:textColorHint="@color/black" />
+        <EditText
+            android:id="@+id/driverPhone"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/armata"
+            android:hint="PhoneNumber"
+            android:layout_marginBottom="30dp"
+            android:textColorHint="@color/black" />
+        <EditText
+            android:id="@+id/driverPermanentAddress"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/armata"
+            android:hint="Permanent Address"
+            android:layout_marginBottom="30dp"
+            android:textColorHint="@color/black" />
+<!--        <Button-->
+<!--            android:id="@+id/driverAdhaar"-->
 <!--            android:layout_width="300dp"-->
 <!--            android:layout_height="wrap_content"-->
 <!--            android:fontFamily="@font/armata"-->
-<!--            android:hint="Driver Name"-->
-<!--            android:textColorHint="@color/black" />-->
-<!--        <EditText-->
-<!--            android:id="@+id/confirmPass"-->
+<!--            android:hint="Adhar Upload +"-->
+<!--            android:layout_marginBottom="30dp"-->
+<!--            android:textColorHint="@color/black"-->
+<!--            android:backgroundTint="@color/white"-->
+<!--            android:textStyle="bold"/>-->
+<!--        <Button-->
+<!--            android:id="@+id/driverLicense"-->
 <!--            android:layout_width="300dp"-->
 <!--            android:layout_height="wrap_content"-->
 <!--            android:fontFamily="@font/armata"-->
-<!--            android:hint="CoDriver(if any)"-->
-<!--            android:textColorHint="@color/black" />-->
-<!--        <EditText-->
-<!--            android:id="@+id/confirmPass"-->
-<!--            android:layout_width="300dp"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:fontFamily="@font/armata"-->
-<!--            android:hint="PhoneNumber"-->
-<!--            android:textColorHint="@color/black" />-->
-<!--        <EditText-->
-<!--            android:id="@+id/confirmPass"-->
-<!--            android:layout_width="300dp"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:fontFamily="@font/armata"-->
-<!--            android:hint="Adhar Upload"-->
-<!--            android:textColorHint="@color/black" />-->
+<!--            android:hint="License Upload +"-->
+<!--            android:textColorHint="@color/black"-->
+<!--            android:backgroundTint="@color/white"-->
+<!--            android:textStyle="bold"-->
+<!--        />-->
+
+        <EditText
+            android:id="@+id/driverAdhaar"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/armata"
+            android:hint="Driver Adhaar number"
+            android:layout_marginBottom="30dp"
+            android:textColorHint="@color/black" />
+
+        <EditText
+            android:id="@+id/driverLicense"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/armata"
+            android:hint="Driver License number"
+            android:layout_marginBottom="30dp"
+            android:textColorHint="@color/black" />
 
 
-<!--    </LinearLayout>-->
+
+        <Button
+            android:id="@+id/driverDetailsSaveBttn"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="Next"
+            android:textAlignment="center"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            />
+    </LinearLayout>
 
 </RelativeLayout>

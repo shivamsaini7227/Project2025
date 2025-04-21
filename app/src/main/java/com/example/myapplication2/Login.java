@@ -10,31 +10,22 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.myapplication2.databinding.ActivitySignupBinding;
+import com.example.myapplication2.databinding.ActivityLoginBinding;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class Login extends AppCompatActivity {
 
-    //variable for each information
     EditText num,psswd;
-    Button button;
-    TextView registerToApp;
-    ActivitySignupBinding binding;
-    FirebaseDatabase db;
-    DatabaseReference reference;
-
-    //Text signUpLink;
+    ActivityLoginBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = ActivitySignupBinding.inflate(getLayoutInflater());
+        binding = ActivityLoginBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        reference = db.getReference("UserData");
-
-        button.setOnClickListener(new View.OnClickListener(){
+        binding.LBttn.setOnClickListener(new View.OnClickListener(){
             public  void onClick(View view){
               num = findViewById(R.id.Lnumber);
               psswd = findViewById(R.id.Lpsswd);
@@ -48,8 +39,7 @@ public class Login extends AppCompatActivity {
             }
         });
 
-        //Go to signUp Activity
-        registerToApp.setOnClickListener(new View.OnClickListener() {
+        binding.SignupLink.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent signUpIntent = new Intent(Login.this, Signup.class);

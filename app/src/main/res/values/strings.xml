@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">My Application2</string>
+    <string-array name="truck_types">
+        <item>Mini Trucks (LCVs)</item>
+        <item>Intermediate Commercial Vehicles (ICVs)</item>
+        <item>Medium Commercial Vehicles (MCVs)</item>
+        <item>Heavy Commercial Vehicles (HCVs)</item>
+        <item>Open Body Trucks (Flatbed)</item>
+        <item>Closed Body / Box Trucks</item>
+        <item>Refrigerated Trucks (Reefer Vans)</item>
+        <item>Tippers / Dump Trucks</item>
+        <item>Tankers</item>
+        <item>Container Trucks</item>
+        <item>Trailers / Multi-Axle Trucks</item>
+        <item>Auto Goods Carriers</item>
+    </string-array>
 </resources>
