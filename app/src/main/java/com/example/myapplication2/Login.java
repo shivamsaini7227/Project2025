@@ -13,7 +13,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.myapplication2.databinding.ActivityLoginBinding;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-
 public class Login extends AppCompatActivity {
 
     EditText num,psswd;
