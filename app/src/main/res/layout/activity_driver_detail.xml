@@ -1,108 +1,130 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CoDriverDetail"
-    android:background="@drawable/background">
+    android:background="@drawable/loginbackground"
+    android:padding="24dp"
+    tools:context=".Login">
 
-    <LinearLayout
+    <TextView
+        android:id="@+id/titleText"
         android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="47dp"
-        android:layout_marginEnd="64dp"
-        android:gravity="center"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:fontFamily="@font/librebodoni"
+        android:text="Driver's Details"
+        android:textColor="@color/login2"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginBottom="60dp"
-            android:fontFamily="@font/armata"
-            android:text="Driver Details"
-            android:textColor="@color/orange"
-            android:textSize="40sp"
-            android:textStyle="bold" />
+    <EditText
+        android:id="@+id/driverName"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
 
-        <EditText
-            android:id="@+id/driverName"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/armata"
-            android:hint="Driver Name"
-            android:layout_marginBottom="30dp"
-            android:textColorHint="@color/black" />
-        <EditText
-            android:id="@+id/driverPhone"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/armata"
-            android:hint="PhoneNumber"
-            android:layout_marginBottom="30dp"
-            android:textColorHint="@color/black" />
-        <EditText
-            android:id="@+id/driverPermanentAddress"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/armata"
-            android:hint="Permanent Address"
-            android:layout_marginBottom="30dp"
-            android:textColorHint="@color/black" />
-<!--        <Button-->
-<!--            android:id="@+id/driverAdhaar"-->
-<!--            android:layout_width="300dp"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:fontFamily="@font/armata"-->
-<!--            android:hint="Adhar Upload +"-->
-<!--            android:layout_marginBottom="30dp"-->
-<!--            android:textColorHint="@color/black"-->
-<!--            android:backgroundTint="@color/white"-->
-<!--            android:textStyle="bold"/>-->
-<!--        <Button-->
-<!--            android:id="@+id/driverLicense"-->
-<!--            android:layout_width="300dp"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:fontFamily="@font/armata"-->
-<!--            android:hint="License Upload +"-->
-<!--            android:textColorHint="@color/black"-->
-<!--            android:backgroundTint="@color/white"-->
-<!--            android:textStyle="bold"-->
-<!--        />-->
+        android:background="@drawable/edittext_background"
+        android:fontFamily="@font/armata"
+        android:hint="driver's name"
+        android:padding="7dp"
+        android:textColorHint="@color/login"
+        android:textSize="13.5sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="32dp"
 
-        <EditText
-            android:id="@+id/driverAdhaar"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/armata"
-            android:hint="Driver Adhaar number"
-            android:layout_marginBottom="30dp"
-            android:textColorHint="@color/black" />
+        app:layout_constraintTop_toBottomOf="@id/titleText" />
 
-        <EditText
-            android:id="@+id/driverLicense"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/armata"
-            android:hint="Driver License number"
-            android:layout_marginBottom="30dp"
-            android:textColorHint="@color/black" />
+    <EditText
+        android:id="@+id/driverPhone"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="16dp"
 
+        android:background="@drawable/edittext_background"
+        android:fontFamily="@font/armata"
+        android:hint="phone number"
+        android:padding="7dp"
+        android:textColorHint="@color/login"
+        android:textSize="13.5sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
 
+        app:layout_constraintTop_toBottomOf="@id/driverName" />
 
-        <Button
-            android:id="@+id/driverDetailsSaveBttn"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
-            android:text="Next"
-            android:textAlignment="center"
-            android:textSize="18dp"
-            android:textStyle="bold"
-            />
-    </LinearLayout>
+    <EditText
+        android:id="@+id/driverPermanentAddress"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="16dp"
 
-</RelativeLayout>
+        android:background="@drawable/edittext_background"
+        android:fontFamily="@font/armata"
+        android:hint="address"
+        android:padding="7dp"
+        android:textColorHint="@color/login"
+        android:textSize="13.5sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@id/driverPhone" />
+
+    <EditText
+        android:id="@+id/driverAdhaar"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/edittext_background"
+        android:fontFamily="@font/armata"
+        android:hint="driver's aadhar number"
+        android:padding="7dp"
+        android:textColorHint="@color/login"
+        android:textSize="13.5sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@id/driverPermanentAddress" />
+    <EditText
+        android:id="@+id/driverLicense"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/edittext_background"
+        android:fontFamily="@font/armata"
+        android:hint="driver's license number"
+        android:padding="7dp"
+        android:textColorHint="@color/login"
+        android:textSize="13.5sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@id/driverAdhaar" />
+
+    <Button
+        android:id="@+id/driverDetailsSaveBttn"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="72dp"
+        android:background="@drawable/button_background"
+        android:fontFamily="@font/imprima"
+        android:text="Continue"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@id/driverLicense" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

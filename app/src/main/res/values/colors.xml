@@ -3,4 +3,6 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="orange">#FB6000</color>
+    <color name="login">#211919</color>
+    <color name="login2">#B3ffffff</color>
 </resources>
